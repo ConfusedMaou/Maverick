@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="styles.css"/>
+  <!-- Link to Font Awesome for social media icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+  <!-- Header Section: Includes name and navigation menu -->
+  <header>
+    <h1>Your Name</h1>
+    <nav>
+      <ul>
+        <!-- Navigation links for the sections -->
+        <li><a href="#" class="nav-link" data-section="about">About Me</a></li>
+        <li><a href="#" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#" class="nav-link" data-section="project1">Project 1</a></li>
+      </ul>
+      <ul class="socials">
+        <!-- Social media icons (LinkedIn and GitHub) -->
+        <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="#" target="_blank"><i class="fab fa-github"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Content Box: Contains all sections of the portfolio -->
+  <div class="content-box" id="content-box">
+    
+    <!-- About Me Section -->
+    <section id="about" class="active">
+      <div class="about-content">
+        <img src="assets/profile.png" alt="Profile Picture" class="profile-img">
+        <div class="bio">
+          <h2>About Me</h2>
+          <p>Hello! I'm a passionate technology enthusiast...</p>
+          <p>I'm currently exploring opportunities...</p>
+
+          <h3>Continuing Education</h3>
+          <ul>
+            <li>Completed data analytics coursework...</li>
+            <li>Studying for IT certifications...</li>
+            <li>Dedicated to lifelong learning...</li>
+            <li>Participating in labs...</li>
+          </ul>
+
+          <h3>Hobbies</h3>
+          <ul>
+            <li><strong>DIY Projects:</strong> Enjoy creating...</li>
+            <li><strong>Gaming:</strong> A fan of immersive games...</li>
+            <li><strong>Creative Work:</strong> Love designing...</li>
+            <li><strong>Fitness:</strong> Staying active helps...</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="hidden">
+      <h2>Projects</h2>
+
+      <!-- Project 1 Overview -->
+      <div class="project">
+        <img src="assets/project1.png" alt="Project Screenshot" class="project-img">
+        <div class="project-details">
+          <h3>Project One</h3>
+          <p>Description of a project. What it does, tools used, etc.</p>
+          <!-- Link to the full project page -->
+          <a href="#" class="nav-link" data-section="project1">View Full Details</a>
+        </div>
+      </div>
+
+      <!-- Project 2 Overview -->
+      <div class="project">
+        <img src="assets/project2.png" alt="Project Screenshot" class="project-img">
+        <div class="project-details">
+          <h3>Project Two</h3>
+          <p>Description of another project...</p>
+          <!-- Link to GitHub -->
+          <a href="#" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project 1 Full Tab: Detailed showcase of Project 1 -->
+    <section id="project1" class="hidden">
+      <h2>Project One: Full Showcase</h2>
+
+      <!-- Internal Navigation for Project 1 -->
+      <nav class="internal-nav">
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#tools">Tools Used</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#code">Code Structure</a></li>
+          <li><a href="#challenges">Challenges</a></li>
+          <li><a href="#solutions">Solutions</a></li>
+          <li><a href="#learnings">What I Learned</a></li>
+          <li><a href="#future">Future Improvements</a></li>
+        </ul>
+      </nav>
+
+      <!-- Internal Sections for Project 1 -->
+      <div class="internal-section" id="overview">
+        <h3>Overview</h3>
+        <p>This project is a full-featured web app built with HTML, CSS, and JavaScript...</p>
+      </div>
+
+      <div class="internal-section" id="tools">
+        <h3>Tools Used</h3>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>VS Code, GitHub</li>
+          <li>Figma for design</li>
+        </ul>
+      </div>
+
+      <div class="internal-section" id="features">
+        <h3>Features</h3>
+        <p>This app includes user authentication, a dashboard, responsive design, and more.</p>
+      </div>
+
+      <div class="internal-section" id="code">
+        <h3>Code Structure</h3>
+        <p>The project follows modular JS patterns and semantic HTML structure...</p>
+      </div>
+
+      <div class="internal-section" id="challenges">
+        <h3>Challenges</h3>
+        <p>Debugging async issues and optimizing for mobile responsiveness were major hurdles.</p>
+      </div>
+
+      <div class="internal-section" id="solutions">
+        <h3>Solutions</h3>
+        <p>Used Chrome DevTools for debugging and implemented media queries for responsiveness.</p>
+      </div>
+
+      <div class="internal-section" id="learnings">
+        <h3>What I Learned</h3>
+        <p>Deepened my understanding of JavaScript modules and accessibility best practices.</p>
+      </div>
+
+      <div class="internal-section" id="future">
+        <h3>Future Improvements</h3>
+        <p>Plan to add dark mode toggle and backend API integration.</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer Section: Includes contact button and copyright -->
+  <footer>
+    <a href="mailto:example@email.com"><button type="button">Contact Me</button></a>
+    <p>&copy; 2025</p>
+  </footer>
+
+  <!-- JavaScript for Section Navigation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('section');
+
+      // Event listener for navigation links
+      links.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault(); // Prevent default link behavior
+          const targetSection = link.getAttribute('data-section'); // Get the target section
+
+          // Deactivate all links and activate the clicked link
+          links.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+
+          // Show the corresponding section and hide others
+          sections.forEach(section => {
+            if (section.id === targetSection) {
+              section.classList.remove('hidden');
+              section.classList.add('active');
+            } else {
+              section.classList.remove('active');
+              section.classList.add('hidden');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
