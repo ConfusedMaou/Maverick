@@ -162,9 +162,9 @@
     </section>
     <!-- Project Maverick Full Tab -->
 <section id="maverick" class="hidden">
-  <h2>Project Maverick: Cooling Garment</h2>
+  <h2>Project Maverick: 3DOF Quadcopter Workbench</h2>
 
-  <!-- Internal Navigation (optional for quick jumps) -->
+  <!-- Internal Navigation -->
   <nav class="internal-nav">
     <ul>
       <li><a href="#welcome-mav">Welcome</a></li>
@@ -180,57 +180,80 @@
     </ul>
   </nav>
 
-  <!-- Section content blocks -->
+  <!-- Sections -->
   <div class="internal-section" id="welcome-mav">
     <h3>Welcome!</h3>
-    <p>Welcome to Project Maverick! Our team — Jennifer Ramos, Santos Chavez, Gabriel Limones, and Logan Swagerty — worked on this project in collaboration with the UTRGV College of Engineering and Business. We hope this gives you insight into our process and results.</p>
+    <p>Welcome to Project Maverick! My name is Angel Rodriguez and I will be working on this project during the Spring and Fall 2025 semesters. The goal of this project is to design and develop a low-cost workbench to implement different control strategies for a 3 DoF UAV. I hope you enjoy this project as much as I did.</p>
   </div>
 
   <div class="internal-section" id="problem-mav">
     <h3>What Problem Are We Trying to Solve?</h3>
-    <p>Construction workers in high-heat environments need improved cooling solutions to prevent heat-related illnesses and maintain comfort during long work shifts.</p>
+    <p>Existing quadcopter test stands are expensive and inaccessible to many universities. This limits hands-on learning opportunities for students. Our goal is to create a workbench where students can implement their own control strategies and get real experience with systems involving sensors, actuators, and embedded controllers.</p>
   </div>
 
   <div class="internal-section" id="background-mav">
     <h3>Important to Know</h3>
-    <p>We conducted research on heat stress, current wearable cooling technologies, and workplace safety standards. Our background investigation revealed that most existing solutions are either too bulky, expensive, or ineffective for extended field use.</p>
+    <p>Before diving into our solution, it's important to understand a few key concepts behind quadcopter control and test stand design.</p>
+    <ul>
+      <li><strong>3 Degrees of Freedom (3DOF):</strong> Our system is designed to allow motion in roll, pitch, and yaw while restricting translational movement.</li>
+      <li><strong>PID Controllers:</strong> Control is achieved using a PID algorithm modeled in Simulink and deployed in real-time.</li>
+      <li><strong>Sensor Feedback Loop:</strong> The Arduino collects data from an IMU and sends it to the controller in Simulink.</li>
+      <li><strong>ESC & PWM Control:</strong> The Arduino Mega determines motor speeds via PWM signals to the ESCs.</li>
+      <li><strong>Educational Focus:</strong> The platform is modular, safe, and low-cost, with mostly 3D printed components to support classroom use.</li>
+    </ul>
   </div>
 
   <div class="internal-section" id="whyimportant-mav">
     <h3>Why This Problem Is Important</h3>
-    <p>Heat-related health risks affect thousands of outdoor workers every year. Addressing this challenge has both humanitarian and economic impact by improving safety and productivity in the construction industry.</p>
+    <p>Students often struggle to bridge the gap between theory and practice in control systems courses. This project gives them hands-on access to tune, test, and validate control strategies on a real system.</p>
+    <p>Traditional drones are often closed-source, expensive, or too risky to use in classrooms. Our design addresses all of these barriers by focusing on safety, openness, and affordability.</p>
+    <p>According to the National Training Laboratories, students retain 75% of what they do — compared to only 10% of what they read. Research also shows improved outcomes when control theory is applied in lab-based environments (IEEE, 2017).</p>
   </div>
 
   <div class="internal-section" id="solution-mav">
     <h3>Our Proposed Solution</h3>
-    <p>We developed a wearable cooling garment that incorporates phase change materials (PCMs) and micro fans to regulate body temperature throughout the workday.</p>
+    <p>We developed a low-cost, open-source quadcopter test stand that allows motion in three rotational degrees of freedom. It is ideal for teaching students about control systems using real hardware and real-time models.</p>
+    <ul>
+      <li><strong>3DOF Stand:</strong> Allows visible and measurable rotational movement for roll, pitch, and yaw.</li>
+      <li><strong>Simulink PID Control:</strong> Control logic is modeled and simulated in MATLAB/Simulink.</li>
+      <li><strong>Arduino Mega:</strong> Acts as the onboard controller handling PWM and sensor communication.</li>
+      <li><strong>3D Printed Frame:</strong> Most parts are designed in CAD and printed to reduce cost and allow flexibility.</li>
+    </ul>
+    <p>This system gives students an intuitive, hands-on way to see how control theory operates in real time — from model to motion.</p>
+
+    <!-- Diagram Placeholder -->
+    <div class="diagram-container">
+      <h4>System Diagram</h4>
+      <img src="assets/control_system_diagram.png" alt="Control System Block Diagram" class="diagram-img">
+      <p class="caption">Figure: Block diagram showing data flow between Simulink, Arduino, sensors, and motors.</p>
+    </div>
   </div>
 
   <div class="internal-section" id="process-mav">
     <h3>From Idea to Reality</h3>
-    <p>We began by brainstorming different garment configurations, materials, and power solutions. Using CAD, we designed the structure and performed thermal simulations to optimize effectiveness. Our final concept balances weight, cost, and comfort.</p>
+    <p>We began with basic sketches and control flow concepts, then tested simple Arduino PWM outputs. Over time, we designed a modular base, tuned initial PID values, and performed simulations to verify stability and responsiveness. The design evolved through multiple iterations driven by test results and usability goals.</p>
   </div>
 
   <div class="internal-section" id="prototype-mav">
-    <h3>Prototype Early and Often</h3>
-    <p>Initial prototypes included passive cooling vests and battery-powered fan systems. These helped us gather user feedback and refine our design. We tested different fabrics, fan placements, and PCM layouts.</p>
+    <h3>Prototyping</h3>
+    <p>Early prototypes used cardboard and PVC to mock up motion axes. We transitioned to 3D printed brackets and parts once we finalized the geometry. We tested various IMU placements, tuning methods, and electrical layouts to find the best balance between simplicity and performance.</p>
   </div>
 
   <div class="internal-section" id="finalproduct-mav">
     <h3>Final Product</h3>
-    <p>Our final prototype is a modular cooling vest with integrated PCMs in high-heat zones, powered airflow vents, and a lightweight rechargeable battery pack. It is washable, ergonomic, and field-ready.</p>
+    <p>The final build features a compact 3DOF rig with integrated electronics, cable routing, and accessible mounting points. It supports quick swaps of components, has a dedicated Arduino+ESC interface board, and includes a downloadable Simulink model for student use.</p>
   </div>
 
   <div class="internal-section" id="future-mav">
     <h3>Future Work</h3>
-    <p>We plan to conduct broader field trials, explore solar charging options, and evaluate commercialization pathways in the construction, agriculture, and emergency response markets.</p>
+    <p>Planned upgrades include data logging support, GUI integration in Simulink, a wireless communication option, and documentation to allow other universities to replicate or modify the setup.</p>
   </div>
 
   <div class="internal-section" id="ack-mav">
     <h3>Acknowledgements</h3>
-    <p>Faculty Advisor: Mr. Marcos Villarreal. <br>
-    Instructors: Dr. Noe Vargas Hernandez, Mr. Greg Potter. <br>
-    Business Collaboration: Dr. Reto Felix, Dr. Pablo Rhi-Perez, and Dr. Sylvia Robles.</p>
+    <p>Faculty Advisor: Mr. Marcos Villarreal.<br>
+    Instructors: Dr. Noe Vargas Hernandez, Mr. Greg Potter.<br>
+    Special thanks to the UTRGV Mechanical Engineering Department and the control systems lab support staff.</p>
   </div>
 </section>
 
