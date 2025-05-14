@@ -172,7 +172,6 @@
       <li><a href="#background-mav">Important to Know</a></li>
       <li><a href="#whyimportant-mav">Why It's Important</a></li>
       <li><a href="#solution-mav">Proposed Solution</a></li>
-      <li><a href="#process-mav">From Idea to Reality</a></li>
       <li><a href="#prototype-mav">Prototyping</a></li>
       <li><a href="#finalproduct-mav">Final Product</a></li>
       <li><a href="#future-mav">Future Work</a></li>
@@ -229,30 +228,37 @@
     </div>
   </div>
 
-  <div class="internal-section" id="process-mav">
-    <h3>From Idea to Reality</h3>
-    <p>We began with basic sketches and control flow concepts, then tested simple Arduino PWM outputs. Over time, we designed a modular base, tuned initial PID values, and performed simulations to verify stability and responsiveness. The design evolved through multiple iterations driven by test results and usability goals.</p>
-  </div>
-
   <div class="internal-section" id="prototype-mav">
     <h3>Prototyping</h3>
-    <p>Early prototypes used cardboard and PVC to mock up motion axes. We transitioned to 3D printed brackets and parts once we finalized the geometry. We tested various IMU placements, tuning methods, and electrical layouts to find the best balance between simplicity and performance.</p>
+    <p>To validate our design before manufacturing, I created a 3D model of the 3DOF quadcopter stand using CAD software. This allowed me to test for fit, mechanical clearance, and mounting points. The 3D model will be used to 3D print key components such as motor brackets, arm mounts, and sensor enclosure. These parts will be assembled into a physical prototype to evaluate stability, weight distribution, and accessibility of electrical connections.</p>
+    <p> This hands-on prototype stage helped identify practical challenges like wire routing, center-of-mass offset, and sensor noise due to vibrations. It will also give us the opportunity to test motor response and refine our Simulink controller with a physical system in the loop.</p>
+    <!-- Image of the Prototype -->
+  <div class="prototype-media">
+    <img src="assets/maverick_prototype.jpg" alt="3D Printed Prototype" class="prototype-img">
+    <p class="caption">Figure: Assembled prototype of the 3DOF quadcopter stand with 3D printed components.</p>
+  </div>
+
+  <!-- Optional: Embedded Video (YouTube or local) -->
+  <div class="prototype-media">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" title="Prototype Demo Video" frameborder="0" allowfullscreen></iframe>
+    <p class="caption">Video: Demonstration of the prototype in operation.</p>
+  </div>
   </div>
 
   <div class="internal-section" id="finalproduct-mav">
     <h3>Final Product</h3>
-    <p>The final build features a compact 3DOF rig with integrated electronics, cable routing, and accessible mounting points. It supports quick swaps of components, has a dedicated Arduino+ESC interface board, and includes a downloadable Simulink model for student use.</p>
+    <p>This project is still under development and will be updated as it goes along with intent to finish the project before the end of the Fall 2025 semester </p>
   </div>
 
   <div class="internal-section" id="future-mav">
     <h3>Future Work</h3>
-    <p>Planned upgrades include data logging support, GUI integration in Simulink, a wireless communication option, and documentation to allow other universities to replicate or modify the setup.</p>
+    <p>The Maverick project is still far from being completed as of right now. In the coming future, I plan on receiving the electrical components and begin assembling the prototype. Additionally, I will need to research more about control systems and how to integrate equations into my controller.</p>
   </div>
 
   <div class="internal-section" id="ack-mav">
     <h3>Acknowledgements</h3>
-    <p>Faculty Advisor: Mr. Marcos Villarreal.<br>
-    Instructors: Dr. Noe Vargas Hernandez, Mr. Greg Potter.<br>
+    <p>Sponsor: Dr. Erik Chumacero.<br>
+    Instructors: Dr. Jose Taha.<br>
     Special thanks to the UTRGV Mechanical Engineering Department and the control systems lab support staff.</p>
   </div>
 </section>
